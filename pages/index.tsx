@@ -30,7 +30,22 @@ function Home() {
         </nav>
       </header>
 
-   
+      <main>
+        <h1>
+          Welcome to{" "}
+          <a href="https://github.com/mirshko/next-web3-boilerplate">
+            next-web3-boilerplate
+          </a>
+        </h1>
+
+        {isConnected && (
+          <section>
+            <ETHBalance />
+
+            <TokenBalance tokenAddress={DAI_TOKEN_ADDRESS} symbol="DAI" />
+          </section>
+        )}
+      </main>
 
       <style jsx>{`
         nav {
